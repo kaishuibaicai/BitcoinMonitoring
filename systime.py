@@ -1,9 +1,8 @@
 from binance.client import Client
 import time
+from lamda import *
 
-api_key = 'xxx'
-api_secret = 'xxx'
-client = Client(api_key, api_secret)
+client = Client(AK, AS)
 
 for i in range(1, 10):
     local_time1 = int(time.time() * 1000)
