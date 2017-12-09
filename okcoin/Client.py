@@ -5,11 +5,11 @@
 
 from OkcoinSpotAPI import OKCoinSpot
 from OkcoinFutureAPI import OKCoinFuture
-
+from lamda import *
 #初始化apikey，secretkey,url
-apikey = 'XXXX'
-secretkey = 'XXXXX'
-okcoinRESTURL = 'www.okcoin.com'   #请求注意：国内账号需要 修改为 www.okcoin.cn  
+apikey = AK
+secretkey = AS
+okcoinRESTURL = 'www.okcoin.cn'   #请求注意：国内账号需要 修改为 www.okcoin.cn  
 
 #现货API
 okcoinSpot = OKCoinSpot(okcoinRESTURL,apikey,secretkey)

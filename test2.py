@@ -1,6 +1,7 @@
 from binance.client import Client
 from lamda import *
 import json
+import urllib
 
 client = Client(AK, AS)
 
@@ -13,4 +14,6 @@ subscriberList = ['EOSBTC', 'EOSETH', 'IOTABTC', 'IOTAETH', 'CDTBTC', 'CDTETH', 
 for item in prices:
 	if item['symbol'] in subscriberList :
 		print 'coinType: {}   pirce: {}'.format(item['symbol'],  float(item['price']))
-print json.loads(client.get_exchange_info())
+#print json.loads(client.get_exchange_info()) 
+rate = urllib.urlopen('http://op.juhe.cn/onebox/exchange/query')
+print json.loads(rate)
