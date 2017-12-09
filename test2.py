@@ -1,6 +1,6 @@
 from binance.client import Client
 from lamda import *
-
+import json
 
 client = Client(AK, AS)
 
@@ -12,4 +12,5 @@ subscriberList = ['EOSBTC', 'EOSETH', 'IOTABTC', 'IOTAETH', 'CDTBTC', 'CDTETH', 
 #print prices
 for item in prices:
 	if item['symbol'] in subscriberList :
-		print 'coinType: {}   pirce: {}'.format(item['symbol'],float(item['price']))
+		print 'coinType: {}   pirce: {}'.format(item['symbol'],  float(item['price']))
+print json.loads(client.get_exchange_info())
