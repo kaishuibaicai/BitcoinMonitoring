@@ -59,8 +59,8 @@ print (okcoinSpot.depth('btc_usd'))
 #print (u'期货指数信息')
 #print (okcoinFuture.future_index('ltc_usd'))
 
-#print (u'美元人民币汇率')
-#print (okcoinFuture.exchange_rate())
+print (u'美元人民币汇率')
+print (okcoinFuture.exchange_rate())
 
 print (u'获取预估交割价') 
 print (okcoinFuture.future_estimated_price('ltc_usd'))
