@@ -13,7 +13,7 @@ subscriberList = ['EOSBTC', 'EOSETH', 'IOTABTC', 'IOTAETH', 'CDTBTC', 'CDTETH', 
 #print prices
 for item in prices:
 	if item['symbol'] in subscriberList :
-		print 'coinType: {}   pirce: {}'.format(item['symbol'],  float(item['price']))
+		print ('coinType: {}   pirce: {}'.format(item['symbol'],  float(item['price'])))
 #print json.loads(client.get_exchange_info()) 
 rate = urllib.urlopen('http://op.juhe.cn/onebox/exchange/query')
-print json.loads(rate)
+print (json.loads(rate))
